@@ -1,37 +1,32 @@
 public class SwitchStatements {
     public static void main(String[] args) {
-        // int day = 9;
-        // int day = 2;
-        int day = 5;
-        String dayName;
+        int day = 6;
 
         switch (day) {
             case 1:
-                dayName = "Monday";
+                System.out.println("Work on Project A");
                 break;
             case 2:
-                dayName = "Tuesday";
+                System.out.println("Work on Project B");
                 break;
             case 3:
-                dayName = "Wednesday";
+                System.out.println("Wednesday: Write proposal");
                 break;
             case 4:
-                dayName = "Thursday";
+                System.out.println("Thursday: Meeting all day");
                 break;
             case 5:
-                dayName = "Friday";
+                System.out.println("Friday: Submit a report");
                 break;
             case 6:
-                dayName = "Saturday";
-                break;
+                System.out.println("Saturday: Relax");
+                
             case 7:
-                dayName = "Sunday";
+                System.out.println("Sunday: Relax");
                 break;
-        
             default:
-                dayName = "N/A";
+                System.out.println("Invalid day");
                 break;
         }
-        System.out.println("Today is "+dayName);
     }
 }
