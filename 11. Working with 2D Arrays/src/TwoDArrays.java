@@ -1,4 +1,4 @@
-public class DeclarationInitialization {
+public class TwoDArrays {
     public static void main(String[] args) {
         int[][] my2DArray = {
             {1,2,3},
