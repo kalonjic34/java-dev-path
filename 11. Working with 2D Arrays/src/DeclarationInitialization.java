@@ -3,18 +3,23 @@ public class DeclarationInitialization {
         int[][] my2DArray = {
             {1,2,3},
             {4,5,6},
-            {7,8,9}
+            {7,8,9,10,11,12,13,0}
         };
 
-
-        System.out.println("My2d Array length: "+my2DArray.length);
-
+        int largest = my2DArray[0][0];
+        int lowest = my2DArray[0][0];
         for (int[] rows : my2DArray) {
             //  iterates through columns
             for (int num : rows) {
-                System.out.print(num+" ");
+                if (num > largest) {
+                    largest = num;
+                }
+                if (num < lowest) {
+                    lowest = num;
+                }
             }
-            System.out.println();
         }
+        System.out.println("Large number is: "+largest);
+        System.out.println("Lowest number is: "+lowest);
     }
 }
