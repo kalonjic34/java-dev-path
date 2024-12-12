@@ -3,23 +3,17 @@ public class DeclarationInitialization {
         int[][] my2DArray = {
             {1,2,3},
             {4,5,6},
-            {7,8,9,10,11,12,13,0}
+            {7,8,9}
         };
 
-        int largest = my2DArray[0][0];
-        int lowest = my2DArray[0][0];
+            int sum = 0;
+    // iterates through rows
         for (int[] rows : my2DArray) {
             //  iterates through columns
             for (int num : rows) {
-                if (num > largest) {
-                    largest = num;
-                }
-                if (num < lowest) {
-                    lowest = num;
-                }
+                sum += num;
             }
         }
-        System.out.println("Large number is: "+largest);
-        System.out.println("Lowest number is: "+lowest);
+        System.out.println("Sum is: "+sum);
     }
 }
