@@ -1,7 +1,16 @@
 public class MethodDemo {
     public static void main(String[] args) {
         // call the medthod
-        displayGreetings();
+        
+        // displayManyGreetings(3);
+        displayGreetings(3);
+    }
+
+    static void displayGreetings(int count){
+        for (int i = 0; i <= count; i++) {
+            displayGreetings();
+            System.out.println();
+        }
     }
 
     //define the method
