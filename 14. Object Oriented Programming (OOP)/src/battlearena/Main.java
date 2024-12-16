@@ -2,13 +2,15 @@ package battlearena;
 
 public class Main {
     public static void main(String[] args) {
-        Enemy zombie = new Enemy("Zombie",10, 1);
-
-        System.out.println(zombie.getTypeOfEnemy() + " has "+zombie.getHealthPoints()+
-        " health points and can do attack of "+zombie.getAttackDamage());
+        Zombie zombie = new Zombie(10, 1);
+        Ogre ogre = new Ogre(20, 3);
         
+        System.out.println("Enemy has "+zombie.getHealthPoints()+
+        " health points and can do attack of "+zombie.getAttackDamage());
+
         zombie.talk();
-        zombie.walkForward();
-        zombie.attack();
+        zombie.spreadDisease();
+
+        ogre.talk();
     }
 }
