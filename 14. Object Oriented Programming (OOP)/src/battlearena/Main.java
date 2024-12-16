@@ -11,6 +11,7 @@ public class Main {
     public static void battle(Enemy e) {
         e.talk();
         e.attack();
+        e.specialAttack();
         
     }
 }
