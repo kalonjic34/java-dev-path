@@ -47,7 +47,7 @@ public class Enemy {
         return id;
     }
 
-    public int getNumberOfEnemies(){
+    public static int getNumberOfEnemies(){
         return numberOfEnemies;
     }
     
