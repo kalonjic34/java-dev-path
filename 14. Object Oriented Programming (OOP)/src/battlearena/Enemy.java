@@ -1,6 +1,6 @@
 package battlearena;
 
-public class Enemy implements IEnemy{
+public abstract class Enemy implements IEnemy{
     private int id;
     private int healthPoints;
     private int healthPointsRemaining;
