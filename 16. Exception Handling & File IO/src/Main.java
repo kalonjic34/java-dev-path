@@ -1,16 +1,28 @@
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
+        FileReader fileReader = null;
+
         try{
-            readFile();
-        } catch(FileNotFoundException e){
+            // connect to a new file
+            fileReader = new FileReader("story.txt");
+
+            // -1 means the file ends
+            int character = 0;
+            while ((character = fileReader.read()) != - 1 ){
+                System.out.println((char)character);
+            }
+        }
+        catch(FileNotFoundException e){
             System.out.println(e);
         }
-    }  
-    public static void readFile() throws FileNotFoundException{
-        FileReader fileReader = new FileReader("file.txt");
-
+        finally{
+            if (fileReader != null) {
+                fileReader.close();
+            }
+        }
     }
 }
