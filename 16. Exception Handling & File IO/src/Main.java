@@ -2,7 +2,8 @@ public class Main {
     public static void main(String[] args) {
         // String numberString = "32";
         // parseString("love2code");
-        parseString("abc");
+        // parseString(null);
+        parseString("32");
 
     }
 
@@ -16,6 +17,9 @@ public class Main {
             } 
             catch(Exception e){
                 System.out.println(e);
+            }
+            finally{
+                System.out.println("In the finally block.");
             }
     } 
 }
