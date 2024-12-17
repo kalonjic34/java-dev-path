@@ -1,4 +1,4 @@
-package battlearena;
+package battlearena.enemies;
 
 public abstract class Enemy implements IEnemy{
     private int id;
