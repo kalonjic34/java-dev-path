@@ -1,6 +1,6 @@
 package battlearena;
 
-public class Enemy {
+public class Enemy implements IEnemy{
     private int id;
     private int healthPoints;
     private int healthPointsRemaining;
@@ -15,34 +15,38 @@ public class Enemy {
         numberOfEnemies++;
         this.id = numberOfEnemies;
     }
+
+    @Override
     public void specialAttack(){
         System.out.println("Enemy does not have a special attack");
     }
 
+    @Deprecated
     public int getHealthPoints() {
         return healthPoints;
     }
 
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints = healthPoints;
-    }
-
+    @Override
     public int getHealthPointsRemaining(){
         return healthPointsRemaining;
     }
-
+    
+    
     public void setHealthPointsRemaining(int healthPointsRemaining){
         this.healthPointsRemaining = healthPointsRemaining;
     }
 
+    @Override
     public int getAttackDamage() {
         return attackDamage;
     }
 
+    @Override
     public void setAttackDamage(int attackDamage) {
         this.attackDamage = attackDamage;
     }
 
+    @Override
     public int getId(){
         return id;
     }
@@ -51,16 +55,21 @@ public class Enemy {
         return numberOfEnemies;
     }
     
-
+    @Override
     public void talk(){
         System.out.println("I am a enemy be prepared to fight!");
     }
 
-    public void walkForward(){
-        System.out.println("Enemy moves closer to you");
-    }
-
+    @Override
     public void attack(){
         System.out.println("Enemy attacks for "+attackDamage+" damage");
     }
+
+    @Override
+    public void setHealthPointsRemaining() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setHealthPointsRemaining'");
+    }
+
+
 }
